@@ -55,6 +55,7 @@ class BvYouTubeVideoView: NSObject, FlutterPlatformView{
         self.viewId = viewId
         self.params = params!
         playerView = UIView(frame: frame)
+        playerView.backgroundColor = .black
         channel = FlutterMethodChannel(
             name: "bv_youtube_video",
             binaryMessenger: messenger
@@ -138,8 +139,8 @@ class BvYouTubeVideoView: NSObject, FlutterPlatformView{
         let showUI = params["showUI"] as! Bool
         let scaleMode = params["scale_mode"] as? Int ?? 0
 
-        self.playerView.backgroundColor = .yellow
         self.player = YTPlayerView()
+        player.isHidden = true
         self.playerView.addSubview(self.player)
 
         self.player.snp.makeConstraints{ make in
@@ -180,6 +181,7 @@ class BvYouTubeVideoView: NSObject, FlutterPlatformView{
 extension BvYouTubeVideoView: YTPlayerViewDelegate{
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         print(#function)
+        playerView.isHidden = false
         let startSeconds = (params["startSeconds"] as? Double ?? 0.0)
         let autoStart = (params["autoStart"] as? Bool ?? false)
         if (startSeconds > 0 || autoStart ) {

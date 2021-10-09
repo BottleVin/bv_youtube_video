@@ -5,7 +5,7 @@ import 'package:bv_youtube_video/bv_youtube_video_listener.dart';
 import 'package:bv_youtube_video/youtube_param.dart';
 import 'package:bv_youtube_video/bv_youtube_video_controller.dart';
 
-typedef FlutterYoutubeViewCreatedCallback = void Function(BVYoutubeVideoController controller);
+typedef BVYoutubeViewCreatedCallback = void Function(BVYoutubeVideoController controller);
 
 class BVYouTubePlayer extends StatefulWidget {
   const BVYouTubePlayer({
@@ -16,7 +16,7 @@ class BVYouTubePlayer extends StatefulWidget {
     this.params = const YoutubeParam()
   }) : super(key: key);
 
-  final FlutterYoutubeViewCreatedCallback? onViewCreated;
+  final BVYoutubeViewCreatedCallback? onViewCreated;
   final BVYouTubeVideoListener listener;
   final YoutubeParam params;
   final YoutubeScaleMode scaleMode;

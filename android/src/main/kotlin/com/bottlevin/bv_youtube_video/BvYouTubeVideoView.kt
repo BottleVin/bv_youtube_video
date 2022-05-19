@@ -52,7 +52,7 @@ class BvYouTubeVideoView(
 
     private fun createView(mode: Int = 0): FrameLayout {
         val videoMode = BvYouTubeVideoScaleMode.values().find { it.mode == mode }
-        container = FLTPlayerView(context).apply {
+        container = FLTPlayerView(context!!).apply {
             setVideoScaleMode(mode = videoMode!!)
         }
         container.apply {
@@ -63,7 +63,7 @@ class BvYouTubeVideoView(
             )
             addView(youtubePlayerView, layoutParams)
         }
-        return FrameLayout(context).apply {
+        return FrameLayout(context!!).apply {
             val layoutParams = FrameLayout.LayoutParams(
                     FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.MATCH_PARENT

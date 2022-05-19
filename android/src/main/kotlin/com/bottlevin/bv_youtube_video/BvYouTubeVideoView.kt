@@ -22,7 +22,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.Abs
 import java.util.concurrent.atomic.AtomicReference
 
 class BvYouTubeVideoView(
-        private val context: Context,
+        private val context: Context?,
         id: Int,
         private val params: Map<String, Any?>,
         private val state: AtomicReference<Lifecycle.Event>,

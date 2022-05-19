@@ -14,7 +14,7 @@ class BvYouTubeVideoFactory(
     private val state: AtomicReference<Lifecycle.Event>
     ) : PlatformViewFactory(StandardMessageCodec.INSTANCE) {
 
-    override fun create(context: Context, viewId: Int, args: Any?): PlatformView {
+    override fun create(context: Context?, viewId: Int, args: Any?): PlatformView {
         val creationParams = args as Map<String, Any?>
         return BvYouTubeVideoView(context, viewId, creationParams, state, messenger)
     }

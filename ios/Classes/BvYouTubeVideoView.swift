@@ -8,6 +8,7 @@
 import Foundation
 import Flutter
 import youtube_ios_player_helper
+import SnapKit
 
 enum PlayerState: String {
     case UNKNOWN = "UNKNOWN"

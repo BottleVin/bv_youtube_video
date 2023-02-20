@@ -16,7 +16,6 @@ A new Flutter project.
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.dependency 'youtube-ios-player-helper', '~> 1.0.3'
-  s.dependency 'SnapKit', '~> 4.0'
   s.platform = :ios, '8.0'
 
   # Flutter.framework does not contain a i386 slice.

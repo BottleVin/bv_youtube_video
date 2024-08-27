@@ -78,13 +78,13 @@ class BvYouTubeVideoView(
         val videoId = params["videoId"] as? String
         val startSeconds = (params["startSeconds"] as Double).toFloat()
         val showUI = params["showUI"] as Boolean
-        val controller = youtubePlayerView.getPlayerUiController()
+        /*val controller = youtubePlayerView.getPlayerUiController()
         controller.showYouTubeButton(false)
         controller.showFullscreenButton(false)
         if (!showUI) {
             controller.showUi(false)
             controller.showVideoTitle(false)
-        }
+        }*/
         youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
                 youtubePlayer = youTubePlayer
